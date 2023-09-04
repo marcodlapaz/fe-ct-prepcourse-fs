@@ -86,7 +86,7 @@ function deleteAbc(string) {
   let nuevoString = "";
 
   for (let i = 0; i < string.length; i++) {
-    if (string[i] !== 'a' && string[i] !== 'b' && string[i] !== 'c') {
+    if (string[i] !== "a" && string[i] !== "b" && string[i] !== "c") {
       nuevoString += string[i];
     }
   }
@@ -102,7 +102,7 @@ function sortArray(arrayOfStrings) {
   // Tu código:
   let nuevoArray = arrayOfStrings.sort(function (a, b) {
     return a.length - b.length;
-  })
+  });
 
   return nuevoArray;
 }
@@ -116,20 +116,10 @@ function buscoInterseccion(array1, array2) {
   // Tu código:
   let nuevoArray = [];
 
-  if (array1.length >= array2.length) {
-    for (let i = 0; i < array1.length; i++) {
-      for (let j = 0; j < array2.length; j++) {
-        if (array1[i] === array2[j]) {
-          nuevoArray.push(array1[i]);
-        }
-      }
-    }
-  } else {
-    for (let i = 0; i < array2.length; i++) {
-      for (let j = 0; j < array1.length; j++) {
-        if (array2[i] === array1[j]) {
-          nuevoArray.push(array2[i]);
-        }
+  for (let i = 0; i < array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+      if (array1[i] === array2[j]) {
+        nuevoArray.push(array1[i]);
       }
     }
   }
